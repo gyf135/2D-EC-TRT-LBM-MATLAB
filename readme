@@ -1,6 +1,6 @@
 References to the algorithm:
 1. Guan, Yifei, and Igor Novosselov. "Two relaxation time lattice Boltzmann method coupled to fast Fourier transform Poisson solver: Application to electroconvective flow." Journal of computational physics 397 (2019): 108830.
-2. Numerical analysis of electroconvection in cross-flow with unipolar charge injection
+2. Guan, Yifei, and Igor Novosselov. "Numerical analysis of electroconvection in cross-flow with unipolar charge injection." Physical Review Fluids 4, no. 10 (2019): 103701.
 
 Flag = 1, intialize the problem. Otherwise, continue from previous state.
 There are two places for CFL. They need to be the same.
