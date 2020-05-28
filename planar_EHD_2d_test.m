@@ -80,7 +80,7 @@ end
 
 CFL =   0.05; %Larger CFL, smaller Omega
 dt = dx*CFL; 
-nu = 0.2;
+nu = 0.1;
 % dt = 0.5*dx^2/(3*nu);
 % CFL = dt/dx;
 cs_square = 1/3/CFL^2;
@@ -138,7 +138,7 @@ omega_minus = 1/(V/(nu/cs_square/dt)+1/2)/dt;
 % omega_minus = omega_plus;
 % tau = dt/omega;
 % disp(['Omega=',num2str(omega)]);
-VC=1.0e-3;
+VC=1.0e-6;
 omega_c_minus = 1/(diffu/cs_square/dt+1/2)/dt;
 omega_c_plus = 1/(VC/(diffu/cs_square/dt)+1/2)/dt;
 % obst([1,Nx],:) = 1;    % Location of top/bottom boundary
