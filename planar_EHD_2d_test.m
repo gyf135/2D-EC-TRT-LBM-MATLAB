@@ -183,16 +183,18 @@ uy_old = uy;
 % ux(1,:,:) = 0;
 % uy(1,:,:) = 0;
 if (cycle == 0)
+if (flag == 1)
 % =========================================================================
 % Perturbation for roll patterns
 % =========================================================================
-% uy = reshape((cos(2*pi*y)-1).*cos(2*pi/LL*x),1,Nx,Ny)*0.001;
-% ux = reshape(LL*sin(2*pi*y).*sin(2*pi/LL*x),1,Nx,Ny)*0.001;
+uy = reshape((cos(2*pi*y)-1).*cos(2*pi/LL*x),1,Nx,Ny)*0.001;
+ux = reshape(LL*sin(2*pi*y).*sin(2*pi/LL*x),1,Nx,Ny)*0.001;
 % uy = reshape((sin(2*pi*y)).*cos(2*pi/LL*x),1,Nx,Ny)*0.1;
 % ux = reshape(-LL*cos(2*pi*y).*sin(2*pi/LL*x),1,Nx,Ny)*0.1;
 
 
 % charge = charge + reshape((cos(2*pi*y)-1).*cos(2*pi/LL*x),1,Nx,Ny)*0.1;
+end
 % =========================================================================
 % ux(1,(Nx)/2,(Ny+1)/2) = 0.3;
 % ux(1,:,Ny/2) = 0.3;
