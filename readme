@@ -3,5 +3,6 @@ References to the algorithm:
 2. Guan, Yifei, and Igor Novosselov. "Numerical analysis of electroconvection in cross-flow with unipolar charge injection." Physical Review Fluids 4, no. 10 (2019): 103701.
 
 Flag = 1, intialize the problem. Otherwise, continue from previous state.
+Perturb = 1 to perturb the flow
 There are two places for CFL. They need to be the same.
 Fast Poisson v2 should be faster than Fast Poisson
