@@ -8,6 +8,7 @@
 close all;clear all;clc
 % GENERAL FLOW CONSTANTS
 flag = 10; % If flag = 1, initialize the problem
+perturb = 10; %% If perturb = 1, perturb the flow
 if flag==1
 time = 0;
 Nx     = 122;      % number of cells in x-direction
@@ -183,7 +184,7 @@ uy_old = uy;
 % ux(1,:,:) = 0;
 % uy(1,:,:) = 0;
 if (cycle == 0)
-if (flag == 1)
+if (perturb == 1)
 % =========================================================================
 % Perturbation for roll patterns
 % =========================================================================
