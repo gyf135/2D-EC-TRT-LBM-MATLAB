@@ -314,15 +314,15 @@ end
 %     [phi] = fast_Poisson(phi, Lx, Ly, reshape(-charge/eps, Nx, Ny),voltage); 
 %     [phi] = fast_Poisson(A, Lx, Ly, reshape(-charge/eps, Nx, Ny),voltage,Kx); 
 % [phi] = slow_Poisson_2(phi, Lx, Ly, reshape(-charge/eps, Nx, Ny),voltage); 
-      phi = fast_Poisson_v2(Nx,Ny,Lx, Ly, reshape(-charge/eps, Nx, Ny),voltage);
-%     phi_hat = fft2(phi);
-%     for j = 1:Nx
-%         Ex_hat(j,:) = 1i*Kx(j)*phi_hat(j,:);
-%         Ey(1,j,:) = -B*reshape(phi(j,:),Ny,1);
-%     end
-%     Ex_hat(Nx/2+1,:) = 0;
-%     Ex(1,:,:) = -reshape(real(ifft2(Ex_hat)),1,Nx,Ny);
-[Ex,Ey] = slow_field(phi,dx);
+     phi = fast_Poisson_v2(Nx,Ny,Lx, Ly, reshape(-charge/eps, Nx, Ny),voltage);
+     phi_hat = fft2(phi);
+     for j = 1:Nx
+         Ex_hat(j,:) = 1i*Kx(j)*phi_hat(j,:);
+         Ey(1,j,:) = -B*reshape(phi(j,:),Ny,1);
+     end
+     Ex_hat(Nx/2+1,:) = 0;
+     Ex(1,:,:) = -reshape(real(ifft2(Ex_hat)),1,Nx,Ny);
+%[Ex,Ey] = slow_field(phi,dx);
 Ex = reshape(Ex,1,Nx,Ny);
 Ey = reshape(Ey,1,Nx,Ny);
 
